@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Search Car</title>
+    
+    <!-- Bootstarp CDNs -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' integrity='sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK' crossorigin='anonymous'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js' integrity='sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD' crossorigin='anonymous'></script>
+    
+    <!-- External Style Sheet -->
+    <link rel='stylesheet' href="{{ url_for('static',filename= 'cusomer.css')}}">
+
+</head>
+<body>
+    <button class="btn btn-dark btn-back" onclick="window.location.href='http://localhost:5000/'">Back</button>
+    <h2 class="head">Search Your Car</h2>
+    <div class="contents1">
+        <form method='POST'>
+            <input type="text" class="textbox" name='reg_no' placeholder="TN11AA1111">
+            <input type="submit" class="btn btn-primary btn_home bottom" value="Search">
+        </form>
+    </div>    
+    {% if data["avail"] == 1 %}
+    <p class="textline">Your car is parked at</p><p class="slot btn-primary">{{data["wing"]}}{{data["slot"]}}</p>
+    {% elif data["avail"] == 0 %}
+    <p class="textline1">Car not Found!</p>
+    {% endif %}
+</body>
+</html>

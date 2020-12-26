@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Check Vehicle</title>
+    
+    <!-- Bootstarp CDNs -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' integrity='sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK' crossorigin='anonymous'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js' integrity='sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD' crossorigin='anonymous'></script>
+    
+    <!-- External Style Sheet -->
+    <link rel='stylesheet' href="{{ url_for('static',filename= 'cusomer.css')}}">
+
+</head>
+<body>
+    <h2 class="head">Hackcess%20Denied<br>Parking Lot</h2>
+    <div class="contents">
+        <button class="btn btn-primary btn_home" onclick="window.location.href='http://localhost:5000/search'">Search Your Car</button>
+        <button class="btn btn-primary btn_home bottom" onclick="window.location.href='http://localhost:5000/predict'">Predict Availiblity</button>
+    </div>    
+    <h3 class="avail">Slots Free: {{data}}</h3>
+</body>
+</html>

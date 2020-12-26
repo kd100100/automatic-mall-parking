@@ -1,0 +1,92 @@
+*{
+    text-align: center;
+}
+body{
+    background-color: #e0e0e0;
+    background-image: url('../static/bg155.jpeg');
+    background-size: 2150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.head{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-75%);
+}
+.contents{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+.bottom{
+    margin-top: 20px;
+}
+.btn_home{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+}
+.avail{
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+.contents1{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+.textbox{
+    width: 200px;
+    height: 30px;
+    border: 0;
+    outline-width: 0;
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.textline{
+    color: white;
+    font-size: larger;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+.textline1{
+    color: white;
+    font-size: larger;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%,-70%);
+}
+.slot{
+    font-size: xx-large;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 9px;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.textline1{
+    color: white;
+    font-size: larger;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+.btn-back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

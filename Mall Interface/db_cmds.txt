@@ -1,0 +1,5 @@
+insert cmd:
+INSERT INTO `records`(`id`, `reg_no`, `color`, `wing`, `slot`, `in_time`, `out_time`, `amt`) VALUES ('1', 'TN22DM8571', '2', 'A', '16', '5.30', '7.30', '500')
+
+fetch data:
+SELECT * FROM `records`

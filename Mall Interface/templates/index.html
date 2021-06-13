@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>Hackcess%20Denied</title>
+    
+    <!-- Bootstarp CDNs -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' integrity='sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK' crossorigin='anonymous'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js' integrity='sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD' crossorigin='anonymous'></script>
+    
+    <!-- External Style Sheet -->
+    <link rel='stylesheet' href="{{ url_for('static',filename= 'style.css')}}">
+    <!-- <link rel='stylesheet' href="../static/style.css"> -->
+
+</head>
+<body>
+    
+    <div class="q">
+        <!-- entry(quad-top-left) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>Entry</h4>
+            </div>
+            <div class="det_display" id="det">
+                <div class="p_slot1"><p class="a{{data['lcolor']}}">{{data["lwing"]}}{{data["lslot"]}}</p></div>
+                <div class="regno1"><p class="a{{data['lcolor']}}">{{data["lreg_no"]}}</p></div>
+                <form method="POST">
+                    <input class="btn btn-primary btn_entry" type="submit" name="button" value="Enter">
+                </form>
+            </div>
+        </div>
+
+        <!-- exit(quad-top-right) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>Exit</h4>
+            </div>
+            <div class="det_display" id="det1">
+                <div class="receipt"><p class="a1"> &#x20B9;{{data["amt"]}} Deducted<br>Automatically</p></div>
+                <form method="POST">
+                    <input class="btn btn-primary btn_exit" type="submit" name="button" value="Exit">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="q">
+
+        <!-- a-wing(quad-bottom-left) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>A Wing</h4>
+            </div>
+            <!-- three colors -->
+            <div class="a">
+                {% if data["red_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'rs.png')}}" alt="" class="img">
+                {% else %}
+                <img src="{{ url_for('static',filename= 'rl.png')}}" alt="" class="img">
+                {% endif %}
+                <div class="p_slot"><p class="a1">{{data["red_wing"]}}{{data["red_slot_no"]}}</p></div>
+                <div class="regno"><p class="a1">{{data["red_reg_no"]}}</p></div>
+            </div>
+            <div class="b">
+                {% if data["green_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'gs.png')}}" alt="" class="img">
+                {% else %}
+                <img src="{{ url_for('static',filename= 'gl.png')}}" alt="" class="img">
+                {% endif %}
+                <div class="p_slot"><p class="a2">{{data["green_wing"]}}{{data["green_slot_no"]}}</p></div>
+                <div class="regno"><p class="a2">{{data["green_reg_no"]}}</p></div>
+            </div>
+            <div class="c">
+                {% if data["blue_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'bs.png')}}" alt="" class="img">
+                {% else %}
+                <img src="{{ url_for('static',filename= 'bl.png')}}" alt="" class="img">
+                {% endif %}
+                <div class="p_slot"><p class="a3">{{data["blue_wing"]}}{{data["blue_slot_no"]}}</p></div>
+                <div class="regno"><p class="a3">{{data["blue_reg_no"]}}</p></div>
+            </div>
+        </div>
+
+        
+        <form method="POST">
+            <input class="btn btn-primary btn_check" type="submit" name="button" value="Check">
+        </form>
+
+        <!-- b-wing(quad-bottom-right) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>B Wing</h4>
+            </div>
+            <!-- three colors -->
+            
+            <div class="a">
+                {% if data["red_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'rl.png')}}" alt="" class="img">
+                <div class="p_slot"><p class="a1">{{data["red_wing"]}}{{data["red_slot_no"]}}</p></div>
+                <div class="regno"><p class="a1">{{data["red_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+            <div class="b">
+                {% if data["green_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'gl.png')}}" alt="" class="img">
+                <div class="p_slot"><p class="a2">{{data["green_wing"]}}{{data["green_slot_no"]}}</p></div>
+                <div class="regno"><p class="a2">{{data["green_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+            <div class="c">
+                {% if data["blue_wing"] == "B" %}
+                <img src="{{ url_for('static',filename= 'bl.png')}}" alt="" class="img">
+                <div class="p_slot"><p class="a3">{{data["blue_wing"]}}{{data["blue_slot_no"]}}</p></div>
+                <div class="regno"><p class="a3">{{data["blue_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

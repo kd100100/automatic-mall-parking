@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* quads_seperation */
+.q{
+    display: flex;
+}
+.quad{
+    width: 100%;
+    height: 49.99vh;
+    display: flex;
+    border: 1px solid black;
+}
+
+/* header */
+.live{
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    margin-top: 5px;
+}
+.spinner-grow{
+    width: 25px;
+    height: 25px;
+    margin: 3px 5px 0 8px;
+}
+.screen{
+    position: absolute;
+    z-index: 100;
+    text-align: right;
+    margin-left: 42%;
+    margin-top: 5px;
+    width: 100px;
+}
+.screen h4{
+    margin: 0;
+    height: 40px;
+    text-align: right;
+}
+
+/* entry&exit */
+
+/* scanner */
+/* #det{
+    display: none;
+} */
+/* #det1{
+    display: none;
+} */
+/* slot_no */
+.det_display{
+    width: 100%;
+    height: 50vh;
+}
+.welcome{
+    margin: 15vh 0;
+}
+.p_slot1{
+    margin-top: 10vh;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 80px;
+}
+.p_slot1 p{
+    margin: auto;
+    padding: 10px 20px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+/* reg_no */
+.regno1{
+    margin-top: 3vh;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 30px;
+}
+.regno1 p{
+    margin: auto;
+    height: 80px;
+    width: 250px;
+    padding: 10px 0;
+    border-radius: 20px;
+    line-height: 55px;
+}
+/* slot_no */
+.det_display{
+    width: 100%;
+}
+.receipt{
+    margin-top: 17vh;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 80px;
+}
+.receipt p{
+    margin: auto;
+    padding: 10px 20px;
+    height: 120px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+
+/* navigation */
+
+/* color_direction_seperation */
+.a,.b,.c{
+    width: 33.31%;
+    height: 50vh;
+    text-align: center;
+}
+.a1{
+    background-color: #700d0d;
+    color: white;
+}
+.a2{
+    background-color: #126b12;
+    color: white;
+}
+.a3{
+    background-color: #050586;
+    color: white;
+}
+
+/* slot_no */
+.p_slot{
+    margin-top: 1vh;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 80px;
+}
+.img{
+    margin-top: 6vh;
+    width: 150px;
+}
+.p_slot p{
+    margin: auto;
+    padding: 10px 0;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* reg_no */
+.regno{
+    margin-top: 1vh;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 30px;
+}
+.regno p{
+    padding: 10px 0;
+    margin: auto;
+    height: 50px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.btn_entry{
+    position: absolute;
+    bottom: 50vh;
+    right: 50%;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+}
+.btn_exit{
+    position: absolute;
+    bottom: 50vh;
+    right: 0;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+}
+.btn_check{
+    position: absolute;
+    bottom: 20vh;
+    left: 49%;
+    transform: translateX(-50%);
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Hackcess%20Denied</title>
+    
+    <!-- Bootstarp CDNs -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' integrity='sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK' crossorigin='anonymous'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js' integrity='sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD' crossorigin='anonymous'></script>
+    
+    <!-- External Style Sheet -->
+    <link rel='stylesheet' href="style.css">
+
+</head>
+<body>
+    
+    <div class="q">
+
+        <!-- entry(quad-top-left) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>Entry</h4>
+            </div>
+            <!-- scanner_animation -->
+            <!-- <img src="scan.gif" alt="" id="scanner"> -->
+            
+            <!-- details -->
+            <div class="det_display" id="det">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="welcome">Welcome to Hackcess%20Denied Parking Lot</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p_slot1"><p class="a2">A5</p></div>
+                        <div class="regno1"><p class="a2">TN10AA0000</p></div>
+                    </div>
+                </div>
+            </div>
+            <!-- swap_func -->
+            <!-- <script>
+                function change(){
+                    document.getElementById('scanner').style.display='none';
+                    document.getElementById('det').style.display='block';
+                    setTimeout(nextscan,5000);
+                }
+                function nextscan(){
+                    document.getElementById('scanner').style.display='block';
+                    document.getElementById('det').style.display='none';
+                }
+            </script> -->
+        </div>
+
+        <!-- exit(quad-top-right) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>Exit</h4>
+            </div>
+            <!-- scanner_animation -->
+            <img src="scan.gif" alt="" id="scanner1">
+            <!-- details -->
+            <div class="det_display" id="det1">
+                <div class="receipt"><p class="a2">TN11AA1111<br>Rs.120 Deducted<br>Automatically</p></div>
+            </div>
+            <!-- swap_func -->
+            <!-- <script>
+                function change1(){
+                    document.getElementById('scanner1').style.display='none';
+                    document.getElementById('det1').style.display='block';
+                }
+                function nextscan1(){
+                    document.getElementById('scanner1').style.display='block';
+                    document.getElementById('det1').style.display='none';
+                }
+            </script> -->
+        </div>
+    </div>
+    
+    <div class="q">
+
+        <!-- a-wing(quad-bottom-left) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>A Wing</h4>
+            </div>
+            <!-- three colors -->
+            <div class="a">
+                <img src="rl.png" alt="" class="img">
+                <div class="p_slot"><p class="a1">A1</p></div>
+                <div class="regno"><p class="a1">TN11AA1111</p></div>
+            </div>
+            <div class="b">
+                <img src="gl.png" alt="" class="img">
+                <div class="p_slot"><p class="a2">A1</p></div>
+                <div class="regno"><p class="a2">TN11AA1111</p></div>
+            </div>
+            <div class="c">
+                <img src="bl.png" alt="" class="img">
+                <div class="p_slot"><p class="a3">A1</p></div>
+                <div class="regno"><p class="a3">TN11AA1111</p></div>
+            </div>
+        </div>
+
+        <!-- b-wing(quad-bottom-right) -->
+        <div class="quad">
+            <!-- live -->
+            <div class="live">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <h4>Live</h4>
+            </div>
+            <!-- screen-name -->
+            <div class="screen">
+                <h4>B Wing</h4>
+            </div>
+            <!-- three colors -->
+            
+            <div class="a">
+                {% if data["red_wing"] == "B" %}
+                <div class="p_slot"><p class="a1">{{data["red_wing"]}}{{data["red_slot_no"]}}</p></div>
+                <div class="regno"><p class="a1">{{data["red_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+            <div class="b">
+                {% if data["green_wing"] == "B" %}
+                <div class="p_slot"><p class="a2">{{data["green_wing"]}}{{data["green_slot_no"]}}</p></div>
+                <div class="regno"><p class="a2">{{data["green_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+            <div class="c">
+                {% if data["blue_wing"] == "B" %}
+                <div class="p_slot"><p class="a3">{{data["blue_wing"]}}{{data["blue_slot_no"]}}</p></div>
+                <div class="regno"><p class="a3">{{data["blue_reg_no"]}}</p></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
